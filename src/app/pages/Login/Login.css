@@ -1,0 +1,128 @@
+.login-register-container {
+    position: absolute;
+    top: 0 ;
+    background:var(--general-background-color);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: 100;
+    border-radius: 0 var(--general-border-radius) var(--general-border-radius) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:var(--fifth-color);
+        & .login-register-content {
+            display: flex;
+            background: var(--secondary-background-color);
+            border-radius: var(--general-border-radius);
+            & figure {
+                width: 22rem;
+                & img {
+                    height: 100%;
+                    border-radius:  0 var(--general-border-radius)   var(--general-border-radius) 0;
+                }
+            }
+            & .login-register-form {
+                padding: var(--general-padding);
+                & .btn-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                    
+                }
+                & .line {
+                    text-transform: uppercase;
+                    position: relative;
+                    padding-top: .5rem;
+                    text-align: center;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        margin-bottom: var(--general-gap);
+                        position: absolute;
+                        background-color: var(--thirdary-color);
+                        left: 0;
+                        bottom: -7px;
+                        width: 4rem;
+                        left: 24px;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        margin-bottom: var(--general-gap);
+                        position: absolute;
+                        background-color: var(--thirdary-color);
+                        right: 0;
+                        bottom: -7px;
+                        width: 4rem;
+                        right: 24px;
+                        }
+                    }
+                & form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--general-gap);
+            padding: var(--general-padding);
+            padding-bottom:0;
+            & .form-group {
+                display: flex;
+                flex-direction: column;
+                &.form-group--flex-direction-column {
+                    flex-direction: row;
+                    align-items: center;
+                    gap: var(--small-gap);
+                    label {
+                        font-size: .9rem;
+                    }
+                }
+            }
+            & label {
+                font-size: 1.2rem;
+            }
+            }
+        }
+    }}
+    & .btn {
+        border-radius: var(--small-border-radius);
+        font-size: .9rem;
+        display:inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1rem;  
+         
+        & a {
+            font-size: 1rem;
+            font-weight: 700;
+        }  
+        &.btn--small-margin {
+            margin: var(--small-padding);
+        }
+        &.btn--margin-top-auto {
+            margin-top: auto;
+            margin-bottom: var(--general-gap);
+        }
+        &.btn--action {
+          
+            color: var(--light-color);
+           
+            border: none;
+            cursor: pointer;
+            
+            & a {
+                color: var(--light-color); 
+                 background-color: var(--thirdary-color); 
+                transition: all 0.4s ease-in-out;
+                &:hover  {
+                background-color: var(--secondary-color);
+                color: var(--general-background-color);
+                transition: all 0.4s ease-in-out;
+                
+
+            }
+            }
+        }
+    }

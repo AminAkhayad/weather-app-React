@@ -1,0 +1,25 @@
+.weather-container {
+    color:var(--light-color);
+    
+    & p {
+      padding-bottom: .1rem;
+    }
+
+    & .weather-information {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      align-items: center;
+      & .weather-location-temp {
+        & h2 {
+          font-size: 2rem;
+          padding-top: .5rem;
+          font-weight: 600;
+        }
+      }
+      & span {
+        font-size: 3.5rem;
+        
+      }
+    }
+  }

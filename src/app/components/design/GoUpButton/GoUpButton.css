@@ -1,0 +1,31 @@
+.extra-container {
+    background-color: var(--secondary-background-color);
+    color: var(--thirdary-color);
+    position:absolute;
+    width: 100%;
+    left: 0;
+    margin-bottom:3rem;
+    & .goUpButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & .label {
+            color: var(--thirdary-color);
+            & .label__title {
+                color: var(--thirdary-color);
+                margin-top:0;
+            }
+        } 
+        & button {
+            margin-bottom: 1rem;
+            background:none;
+            width: 7rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.trending-container {
+   margin-bottom:2rem;
+    & .trends {
+        & .slick-slider {
+            & .headline-content {
+                padding: 1.5rem;
+                & h3 { font-family: "News of the World";
+                    font-style: italic; 
+                    font-size: 4rem;
+                    line-height: 44px;
+                    text-transform: uppercase;
+                   
+                }
+            }
+            & .slick-prev,.slick-next {
+                background-color: var(  --thirdary-color);    
+                color:var(--thirdary-color);
+                outline: solid 3px var(--thirdary-color);
+            }
+            & button {
+                width: 3rem;
+                height: 3rem;
+                text-align: center;
+                
+            }
+        & .slick-prev:before,.slick-next:before {
+           font-family: inherit;
+           font-size: 2rem;
+           
+        }
+     & .slick-next:before {
+            content:  "🢡";
+     }
+     & .slick-prev:before {
+            content: "🢠";
+     }
+     
+     
+        margin-top: 1rem;
+            width: 92%;
+            background-color: var(--general-background-color);
+                        padding: var(--general-padding);
+                        outline: solid 3px var(--thirdary-color);
+            border-radius: var(--general-border-radius);
+            display: flex;
+    
+            
+            font-weight: 700;
+            color: var(--light-color);
+            justify-content: space-between;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                outline: solid 3px var(--secondary-background-color);
+                transition: all 0.2s ease-in-out;
+            }
+            & h3 {
+                padding-bottom: 2rem;
+                font-size: 3rem;
+                width: 73rem;
+            }
+            & .btn {
+                width: 10rem;
+                margin-left :0.2rem;
+                background-color: var(--secondary-background-color);
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    box-shadow: white 5px 4px;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+         
+        }
+        
+                    display: flex;
+                padding: var(--general-padding);
+                border-radius: var(--general-border-radius);
+                flex-direction: column;
+                border: 3px solid var(--thirdary-color);
+                align-items: center;
+                gap: 1rem;
+                & .label--small {
+                    margin: auto auto; */
+                    text-transform: uppercase;
+                    width: 38rem;
+                    & h3 {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding-top: 1rem;
+                        font-family: "News of the World";
+                        font-style: italic;
+                        display: flex;
+                        flex-direction: column;
+                        color: var(--light-color);
+                        line-height: 62px;
+                        letter-spacing: 0px;
+                        font-size: 7rem;
+                        & span {
+                            text-align: end;
+                        }
+                    }
+                
+                }
+    }
+    & ul {
+        display: flex;
+      
+        gap: 1rem;
+        padding: var(--general-padding);
+        border-radius: var(--general-border-radius);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+& li {
+    display: flex;
+    gap: 1rem;
+    padding: var(--general-padding);
+    border-radius: var(--general-border-radius);
+    background-color: var(--general-background-color);
+    color: var(--light-color);
+    font-size: 1.2rem;
+    flex-direction: column;
+    outline:solid 3px var(--thirdary-color);
+    width: 20rem;
+    justify-content: space-between;
+    position: relative;
+    width: 20rem;
+    height: 12rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0px;
+    justify-content-center;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        outline: solid 3px var(--secondary-background-color);
+        transition: all 0.2s ease-in-out;
+    }
+    & .btn {
+        background-color: var(--secondary-background-color);
+        transition: all 0.2s ease-in-out;
+        margin-bottom: .8rem;
+  &:hover {
+      box-shadow: white 5px 4px;
+      
+      transition: all 0.2s ease-in-out;
+  }
+    }
+    &:first-child {
+        width: 41rem;
+                height: 12rem;
+                letter-spacing: -2px;
+                font-size: 2rem;
+                font-weight: 700;
+                & .btn {
+                    letter-spacing: 0px;
+                }
+    }
+   
+}
+
+    }
+}

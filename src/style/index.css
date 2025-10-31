@@ -1,0 +1,529 @@
+@font-face {
+  font-family: 'News of the World';
+  src: url('/assets/fonts/NewsoftheWorld.woff2') format('woff2'),
+      url('/assets/fonts/NewsoftheWorld.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'News of the World';
+  src: url('/assets/fonts/NewsoftheWorld-WideItalic.woff2') format('woff2'),
+      url('/assets/fonts/NewsoftheWorld-WideItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'News of the World';
+  src: url('/assets/fonts/NewsoftheWorld-Wide.woff2') format('woff2'),
+      url('/assets/fonts/NewsoftheWorld-Wide.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'News of the World';
+  src: url('/assets/fonts/NewsoftheWorld-Italic.woff2') format('woff2'),
+      url('/assets/fonts/NewsoftheWorld-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --general-padding: 1rem;
+  --general-border-radius: 1rem;
+  --small-border-radius: 0.5rem;
+  --general-gap: 1rem;
+  --general-background-color: #131B23;
+  --general-margin: 1rem;
+  --max-width:92rem;
+  --secondary-background-color: #E9F1F7;
+  --light-color: #f4f8fb;
+  --thirdary-color:#213547;
+  --fourth-color:#cbe0ec;
+  --fifth-color:#182b39;
+  --small-padding: .5rem;
+  --small-margin: .5rem;
+  --small-gap: .5rem;
+}
+
+
+
+a {
+  font-weight: 500;
+  color:black;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+ background-color:#131B23;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.btn {           
+  outline: .125rem solid black;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+      box-shadow: black 5px 4px;
+      
+      transition: all 0.2s ease-in-out;
+  }
+  &.btn--search{
+      display: flex;
+      & a {   
+      padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.3rem;
+  }
+  &.btn--middle {
+    margin-bottom: 1rem;
+  }
+  }
+  & a {   
+      padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+ 
+  gap: .5rem;
+  }
+  
+}
+
+   
+ .brand-container {
+   font-family: "News of the World";
+display: flex;
+align-items: center;
+background-color:var(--general-background-color);
+color: var(--light-color);
+width:auto;
+padding:var(--general-padding);
+border-radius:var(--general-border-radius);
+font-size: 3.5rem;
+height:4rem;
+font-style: italic;
+
+& .brand-container__item {
+    transform: translate(-1px, -9px);
+    text-transform: uppercase;
+}
+
+
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  color:var(--fifth-color);
+  & .news__article-container {
+    display: flex;
+   gap:1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    & .news__article-item {
+      width:29.6rem;
+      outline: 0.25rem solid var(--thirdary-color);
+     border-radius:var(--general-border-radius);
+      overflow: hidden;
+      position: relative;
+      transition:background-color 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+     &:hover {
+      outline:.25rem solid var(--light-color);
+     }
+      &:hover .article__description {
+        transform: translateY(0);
+        transition: all 0.2s ease-in-out;
+      }
+      
+      & .article__description {
+       background-color:var(--secondary-background-color);
+       position: absolute;
+        bottom: 0;
+        padding: var(--general-padding);
+        width:100%;
+        transform: translateY(100%);
+        transition: all 0.2s ease-in-out;
+        & h3 {
+          padding-bottom: var(--small-padding);
+        }
+        & p {
+          padding-bottom: var(--small-padding);
+        }
+      
+        
+      }
+      & .news__article__tag {
+        color: var(--general-background-color);
+        padding: var(--small-padding);
+        border-radius: var(--general-border-radius);
+      position: absolute;
+      top: 0;
+      display: flex;
+      gap : 0.5rem; 
+      & li {
+        background-color: var(--light-color);
+        padding: var(--small-padding);
+        border-radius: var(--general-border-radius);
+        color: var(--general-background-color);
+        min-width: 1.5rem;
+        border: solid 1px var(--general-background-color);
+      }
+      }
+    }
+  }
+}
+
+.label {
+  padding: var(--general-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  gap: var(--general-gap);
+  font-size: 1.5rem;
+  & h1,h2,h3 {
+    font-family: "News of the World";
+    font-size: 3.2em;
+    font-weight: 900;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    &.label__title {
+      margin-top: 4rem;
+    }
+    & svg {
+    fill: var(--light-color);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #242424;
+    --background-color: #242424;
+  }
+  color : var(--color);
+ 
+
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #242424;
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+  color:var(--color);
+}
+
+@media (max-width: 1493px) {
+  & .header-container {
+    width: 80rem;
+    margin: 0 auto;
+  }
+  footer {
+    width: 80rem;
+    margin: 0 auto;
+  }
+  
+  
+ & .headlines-container {
+    width:80rem;
+    margin: 0 auto;
+  }
+  & .news-container {
+    width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    & .news__article-container {
+      & .news__article-item {
+          width: 25.6rem;
+      }
+    }
+  }
+  & .trending-container {
+    width: 80rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  & .article-container {
+    width: 80rem;
+    margin: 0 auto;
+   } 
+}
+
+@media (max-width: 1303px) {
+ .header-container {
+    width: 70rem;
+    margin: 0 auto;
+    & .brand-container {
+      font-size: 1.9rem;
+      padding: .4rem;
+      & figure {
+        & .brand__logo {
+          width: 3rem;
+        }
+      }
+    }
+
+    & .btn {
+      padding: .5rem;
+      & a {
+        padding:0;
+        font-size: 1rem;
+      }
+    }
+  }
+  footer {
+    width: 70rem;
+    margin: 0 auto;
+  }
+  & .headlines-container {
+    width:70rem;
+    margin: 0 auto;
+  }
+  & .news-container {
+    width: 70rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    & .news__article-container {
+      & .news__article-item {
+          width: 25.6rem;
+      }
+    }
+  }
+  & .trending-container {
+    width: 70rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  & .article-container {
+    width: 70rem;
+
+    margin: 0 auto;
+    & .label {
+      font-size: 1.2rem;
+      &.label--small {
+        font-size: 1rem;
+      }
+    }
+  }
+    & footer {
+      & .footer-links {
+        & .label {
+          font-size: 1rem;
+        }
+      }
+    }
+
+}
+
+@media(max-width:1000px) {
+  .header-container {
+    & .brand-container {
+      font-size: .9rem;
+      padding: .4rem;
+      box-shadow:none;
+      
+      & .brand__logo {
+        display:none;
+      }
+  }
+    width: 45rem;
+    & .btn {
+      padding:0;
+      border:none;
+      outline:none;
+      & a {
+        & svg {
+          display:none;
+        
+      }
+      }
+      
+      &:hover {
+        box-shadow: none;
+      }
+      & a {
+        font-size: .9rem;font-weight:400;
+      }
+    }
+   & nav {
+    font-size: 1.2rem;
+    padding:0;
+    gap:.4rem;
+    & .header-categories {
+      padding:.6rem;
+     & li {
+      & .article-detail__link {
+        font-size: .9rem;
+      }
+     }
+    }
+   }
+  }
+
+  & .headlines-container {
+    width:45rem;
+    margin: 0 auto;
+    & .headline_item {
+      &.main-headline {
+          & figure {
+              & img {
+                  border-radius: var(--general-border-radius);
+                  height: 38rem;
+                  object-fit: cover;
+              }
+          }
+      }
+  }
+  }
+  & .news-container  {
+    width: 45rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    & .news__article-container {
+      & .news__article-item {
+          width: 21.6rem;
+          
+          & .article__description { 
+            padding:.5rem;
+            & h3 {
+              font-size: 1rem;
+            }
+            &:hover {
+              & h3 {
+                font-size: 1rem;
+              }
+             
+                        }
+        }
+      }
+    }
+  }
+
+  & .trending-container {
+width: 45rem;
+& .headline-content {
+  font-size: 1rem;
+  &.trends {
+    & .slick-slider {
+      & .headline-content {
+        & .headline__title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  
+}
+  }
+  .trending-container {
+    & .trends {
+        & .slick-slider {
+            & .headline-content {
+                & .headline__title {
+                    font-family: "News of the World";
+                    font-style: italic;
+                    font-size: 1.5rem;
+                  
+                  
+                }
+            }
+        }
+    }
+}
+& footer {
+  width: 45rem;
+  margin: 0 auto;
+  & .brand-container {
+    font-size: 1.2rem;
+    padding: .4rem;
+    & figure {
+      & .brand__logo {
+        width: 3rem;
+      }
+    }
+  }
+  & .footer-links {
+    & .label {
+      font-size: 1rem;
+      & .label__title {
+        & h3 {
+          font-size: 1.2rem;
+        }
+
+      }
+    }
+  }
+  & .footer-description {
+    &.footer-description--small {
+      width:17rem;
+      font-size: .9rem;
+      margin-right:1rem
+    }
+  }
+}
+}

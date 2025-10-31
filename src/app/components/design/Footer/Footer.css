@@ -1,0 +1,69 @@
+footer {
+    margin-top:18.5rem;
+    background-color: var(--fifth-color);
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    padding-bottom: 6rem;
+    & .about-content {
+        padding-top: 2rem;
+    }
+    & .label {
+        justify-content: start;
+   
+    }   
+    & .footer-description {
+        color: var(  --secondary-background-color);
+        padding: var(--general-padding);
+        font-size: 1.2rem;
+        width:30rem;
+        border-radius: var(--general-border-radius);
+        border: 3px solid var(--thirdary-color);
+        margin-left: var(--general-margin);
+        
+      }
+      & .footer-categories {
+        display: flex;
+        flex-direction: column;
+        gap: var(--general-margin);
+        & .btn {
+            background-color: var(--secondary-background-color);
+            transition: all 0.2s ease-in-out;
+           &:hover {
+            box-shadow: 4px 4px white;
+            transition: all 0.2s ease-in-out; ;
+           }
+        }
+      }
+      & .extra-links {
+        display: flex;
+        gap: var(--general-margin);
+        & li {
+
+            & svg {
+                color: var(--secondary-background-color);
+                width: 3rem;
+                height: 3rem;
+                transition: all 0.2s ease-in-out;
+                outline:solid 3px var(--fifth-color);
+                padding: 0.5rem;
+                
+                &:hover {
+                  outline:solid 3px var(--secondary-background-color);
+                  border-radius:var(--general-border-radius);
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+      }
+      & .footer-copyright {
+        position: absolute;
+        bottom: 0;
+        background-color: var(--secondary-background-color);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+      }
+}
